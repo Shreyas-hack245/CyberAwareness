@@ -1,0 +1,72 @@
+# API Keys Configuration
+# Copy these to your .env file and replace with actual values
+
+# MongoDB Connection
+MONGODB_URI=mongodb://localhost:27017/walrus_db
+
+# Session Secret
+SESSION_SECRET=your-secret-key-change-in-production
+
+# JWT Secret
+JWT_SECRET=your-jwt-secret-change-in-production
+
+# Generative LLM API Keys (Required for AI analysis)
+# Choose one: Gemini API (free tier available) or ChatGPT API
+
+# Gemini API Key (Recommended - has free tier for non-enterprise use)
+# Get your API key from: https://makersuite.google.com/app/apikey
+GEMINI_API_KEY=your_gemini_api_key
+
+# OR ChatGPT API Key (Alternative)
+# Get your API key from: https://platform.openai.com/api-keys
+CHATGPT_API_KEY=your_chatgpt_api_key
+# OR OpenAI API Key (alternative name for ChatGPT)
+OPENAI_API_KEY=your_openai_api_key
+
+# LLM Provider Selection (Optional)
+# Set to 'gemini' or 'chatgpt' (defaults to gemini if GEMINI_API_KEY is set)
+LLM_PROVIDER=gemini
+
+# Model Configuration (Optional)
+GEMINI_MODEL=gemini-1.5-flash
+CHATGPT_MODEL=gpt-4o-mini
+LLM_TIMEOUT=30000
+
+
+
+
+
+
+
+
+# URL Threat Intelligence API Keys (Optional but Recommended)
+# These enhance URL analysis with real-time threat intelligence
+
+# PhishTank API Key (Optional - works without key, but better with registered app)
+# Get from: https://www.phishtank.com/api_register.php
+PHISHTANK_API_KEY=your_phishtank_api_key
+
+# VirusTotal API Key (Recommended - Free tier: 4 requests/minute)
+# Get from: https://www.virustotal.com/gui/join-us
+VIRUSTOTAL_API_KEY=your_virustotal_api_key
+
+# APIVoid/URLVoid API Key (Recommended - Free tier available)
+# Get from: https://www.apivoid.com/signup.php
+APIVOID_API_KEY=your_apivoid_api_key
+
+# Cloudflare URL Scanner API (Optional but Recommended for Enhanced URL Analysis)
+# Provides deep URL scanning with screenshots, network analysis, and security detection
+# Setup Instructions:
+# 1. Go to Cloudflare Dashboard > Account > API Tokens
+# 2. Click "Create Token" > "Create Custom Token"
+# 3. Set Token Name: "URL Scanner API"
+# 4. Under Permissions, select "Account" > "URL Scanner" > "Edit"
+# 5. Copy the generated token
+# 6. Get your Account ID from Cloudflare Dashboard (right sidebar)
+# Note: These are BACKEND environment variables (no VITE_ prefix)
+# Add to your server/.env file (or backend environment variables in production)
+CLOUDFLARE_API_TOKEN=your_cloudflare_api_token
+CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id
+
+# Server Port
+PORT=5000
